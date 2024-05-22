@@ -1,0 +1,42 @@
+\doxysection{Receiver.\+h}
+\hypertarget{_receiver_8h_source}{}\label{_receiver_8h_source}\index{Core/Src/Receiver.h@{Core/Src/Receiver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ rc.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 16,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Conor\ Schott}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_RC\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_RC\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Declare\ global\ variables\ for\ trigger\ and\ wheel\ values}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{extern}\ uint16\_t\ g\_trigger\_val;\ \textcolor{comment}{//\ Global\ variable\ for\ trigger\ value}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ uint16\_t\ g\_wheel\_val;\ \ \ \textcolor{comment}{//\ Global\ variable\ for\ wheel\ value}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Struct\ to\ hold\ RC\ receiver\ configuration}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00021\ \ \ \ \ uint32\_t\ Trigger\_Channel1\_Rise;\ \textcolor{comment}{//\ Trigger\ channel\ for\ rising\ edge\ capture}}
+\DoxyCodeLine{00022\ \ \ \ \ uint32\_t\ Trigger\_Channel1\_Fall;\ \textcolor{comment}{//\ Trigger\ channel\ for\ falling\ edge\ capture}}
+\DoxyCodeLine{00023\ \ \ \ \ uint32\_t\ Trigger\_Channel2\_Rise;\ \textcolor{comment}{//\ Wheel\ channel\ for\ rising\ edge}}
+\DoxyCodeLine{00024\ \ \ \ \ uint32\_t\ Trigger\_Channel2\_Fall;\ \textcolor{comment}{//\ Wheel\ channel\ for\ falling\ edge}}
+\DoxyCodeLine{00025\ \ \ \ \ TIM\_HandleTypeDef*\ htim;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ timer\ handle\ used}}
+\DoxyCodeLine{00026\ \ \ \ \ uint32\_t\ nominalPWM;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Nominal\ PWM\ from\ the\ receiver\ (in\ microseconds)}}
+\DoxyCodeLine{00027\ \ \ \ \ uint32\_t\ highPWM;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ High\ PWM\ period\ value\ from\ the\ receiver\ (in\ microseconds)}}
+\DoxyCodeLine{00028\ \ \ \ \ uint32\_t\ lowPWM;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Low\ PWM\ period\ value\ from\ the\ receiver\ (in\ microseconds)}}
+\DoxyCodeLine{00029\ \}\ \mbox{\hyperlink{struct_r_c_receiver}{RCReceiver}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Function\ prototypes}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ startRCReceiverCapture(\mbox{\hyperlink{struct_r_c_receiver}{RCReceiver}}*\ p\_rc);\ \textcolor{comment}{//\ Function\ to\ start\ RC\ receiver\ capture}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ calculateTriggerValueCallback(\mbox{\hyperlink{struct_r_c_receiver}{RCReceiver}}*\ p\_rc,\ uint16\_t\ previousWheelValue);\ \textcolor{comment}{//\ Function\ to\ calculate\ trigger\ value}}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ calculateWheelValueCallback(\mbox{\hyperlink{struct_r_c_receiver}{RCReceiver}}*\ p\_rc,\ uint16\_t\ previousWheelValue);\ \textcolor{comment}{//\ Function\ to\ calculate\ wheel\ value}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_RC\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

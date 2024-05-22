@@ -1,0 +1,4 @@
+../Core/Src/Receiver.c:17:17:calculateValue	3
+../Core/Src/Receiver.c:25:6:startRCReceiverCapture	1
+../Core/Src/Receiver.c:34:6:calculateTriggerValueCallback	1
+../Core/Src/Receiver.c:39:6:calculateWheelValueCallback	1

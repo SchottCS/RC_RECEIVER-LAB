@@ -1,0 +1,4 @@
+../Core/Src/Motor_Driver.c:14:6:motor_brake	16	static
+../Core/Src/Motor_Driver.c:21:6:motor_enable	16	static
+../Core/Src/Motor_Driver.c:28:6:motor_disable	16	static
+../Core/Src/Motor_Driver.c:35:6:motor_set_duty_cycle	16	static

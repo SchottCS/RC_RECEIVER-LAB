@@ -1,0 +1,32 @@
+\doxysection{Motor\+\_\+\+Driver.\+h}
+\hypertarget{_motor___driver_8h_source}{}\label{_motor___driver_8h_source}\index{Core/Src/Motor\_Driver.h@{Core/Src/Motor\_Driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Reciever.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 14,\ 2024}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ Conor\ Schott}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SRC\_MOTOR\_DRIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SRC\_MOTOR\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdint.h>}\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Include\ standard\ integer\ types}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}\ \ \ \textcolor{comment}{//\ Include\ STM32\ HAL}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00015\ \ \ \ \ uint32\_t\ forward\_channel;\ \ \ \ \textcolor{comment}{//\ Channel\ for\ forward\ motion}}
+\DoxyCodeLine{00016\ \ \ \ \ uint32\_t\ backward\_channel;\ \ \ \textcolor{comment}{//\ Channel\ for\ backward\ motion}}
+\DoxyCodeLine{00017\ \ \ \ \ TIM\_HandleTypeDef\ *htim;\ \ \ \ \ \textcolor{comment}{//\ Timer\ handle\ for\ PWM\ control}}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{struct_motor_driver}{MotorDriver}};\ \textcolor{comment}{//\ Struct\ for\ motor\ driver\ configuration}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Function\ prototypes}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ motor\_enable(\mbox{\hyperlink{struct_motor_driver}{MotorDriver}}\ *motor);\ \textcolor{comment}{//\ Enable\ motor\ driver}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ motor\_disable(\mbox{\hyperlink{struct_motor_driver}{MotorDriver}}\ *motor);\ \textcolor{comment}{//\ Disable\ motor\ driver}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ motor\_set\_duty\_cycle(\mbox{\hyperlink{struct_motor_driver}{MotorDriver}}\ *motor,\ int16\_t\ duty\_cycle);\ \textcolor{comment}{//\ Set\ motor\ duty\ cycle}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ motor\_brake(\mbox{\hyperlink{struct_motor_driver}{MotorDriver}}\ *motor);\ \textcolor{comment}{//\ Apply\ brake\ to\ motor}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_MOTOR\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

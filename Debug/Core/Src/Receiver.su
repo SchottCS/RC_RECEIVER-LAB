@@ -1,0 +1,4 @@
+../Core/Src/Receiver.c:17:17:calculateValue	24	static
+../Core/Src/Receiver.c:25:6:startRCReceiverCapture	16	static
+../Core/Src/Receiver.c:34:6:calculateTriggerValueCallback	16	static
+../Core/Src/Receiver.c:39:6:calculateWheelValueCallback	16	static
